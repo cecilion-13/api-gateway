@@ -14,8 +14,12 @@ zuul:
   # exclude Authorization from sensitive headers
   sensitiveHeaders: Cookie,Set-Cookie
   ignoredServices: '*'
-
+  host:
+    connect-timeout-millis: 10000
+    socket-timeout-millis: 1000000
 
 spring:
   application:
     name: api-gateway-service
+
+
